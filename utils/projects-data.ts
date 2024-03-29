@@ -1,8 +1,8 @@
-import { Projects } from "../interfaces";
+import { IProjects } from "../interfaces";
 
 //host: "https://3z3r11lnih.execute-api.ap-south-1.amazonaws.com/dev",
 
-export const projectsData: Projects[] = [
+export const projectsData: IProjects[] = [
   {
     name: "HSBC Admin",
     projectid: "708572ae-83c2-4851-a67d-f0d53248ba0e",

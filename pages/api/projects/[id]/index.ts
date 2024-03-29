@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { projectsData } from "../../../../utils/projects-data";
-import { Projects } from "../../../../interfaces";
+import { IProjects } from "../../../../interfaces";
 
 const handler = (_req: NextApiRequest, res: NextApiResponse) => {
     const {
@@ -8,7 +8,7 @@ const handler = (_req: NextApiRequest, res: NextApiResponse) => {
         method,
       } = _req;
   
-      const data: Projects[] = projectsData.filter((f) => f.projectid === id)
+      const data: IProjects[] = projectsData.filter((f) => f.projectid === id)
 
   try {
     if (!Array.isArray(projectsData)) {
