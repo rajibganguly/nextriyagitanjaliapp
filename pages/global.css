@@ -1,0 +1,66 @@
+@import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap";
+
+
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.borderStyle {
+    border-top: 10px solid transparent;
+    padding: 15px;
+    border-image: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg) 30 round;
+}
+
+.bg-body-image {
+    background-repeat: no-repeat;
+    animation: slideUp 15s infinite;
+}
+
+figure {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.article1 {}
+
+.article1 strong {
+    color: #7b7b7b
+}
+
+.article1 h3 {
+    color: #c0b7d1
+}
+
+@keyframes slideUp {
+    0% {
+        background-position: left top;
+    }
+
+    50% {
+        background-position: right top;
+    }
+
+    100% {
+        background-position: left bottom;
+    }
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        background-position: left top;
+    }
+
+    50% {
+        background-position: right top;
+    }
+
+    100% {
+        background-position: left bottom;
+    }
+}
