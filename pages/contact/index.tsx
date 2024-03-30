@@ -90,9 +90,7 @@ function ContactPage() {
                 </div>
                 <hr/>
                 <div className="address2 mt-4">
-                  <p>Address: SanjayNagar, Bangalore, India.</p>
-                  <div>Call Me: 91+ 821-752-8181</div>
-                  <div>Write Me: w3earth@outlook.com</div>
+                  <p>Address: RiyaGitanjali. Modibari, Kolkata - 700121</p>
                   <div>
                     <a href="https://wa.me/8217528181">
                       Connect to <strong>what`sApp</strong>

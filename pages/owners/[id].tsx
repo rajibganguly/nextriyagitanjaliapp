@@ -58,9 +58,10 @@ const OwnersPage = () => {
                 <h2 className="display-5 link-body-emphasis mb-1">{ref.name}</h2>
               <span className="badge rounded-pill text-bg-primary mb-2">
               <small>Duration : {durationPeriod(ref.personal[0].registrationdate)}</small>
-              </span> 
-              <hr/>
+              </span>
+              <br/> 
               <button className="btn btn-outline-dark" onClick={editProfile}>Edit</button>
+              <hr/>
                 </div>
                 <div className="col-md-6 col-xs-12">
                 <img src={ref.image} className="img-thumbnail" alt={ref.name} />

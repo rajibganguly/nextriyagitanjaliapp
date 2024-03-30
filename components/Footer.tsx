@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container" style={styled}>
         <footer className="py-5">
           <div className="row">
-            <div className="col-6 col-md-5 mb-4">
+            <div className="col-md-5 col-xs-12 mb-4">
               <h5>About:</h5>
               <p className="nav flex-column">
               Riya Gitanjali is developed with a touch of Bengal which will give a feeling of a close community to all the residents. The project is surrounded with a lot of greenery and a scenic view the occupants can enjoy by having a walk around the property. Riya Gitanjali has good connectivity and is 20 min from Barasat. Riya Gitanjali vicinity includes several basic utilities like Barrackpore Math Para Bus Stop, Barrackpore Railway Station, St Claret School, Doctor BN Bose State General Hospital, HDFC Bank ATM, Viraat Bazaar, Apollo Pharmacy, Dada Boudi Hotel, Atindra Cinema Hall, Air Force Station, and Petrol Pump etc.

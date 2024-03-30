@@ -4,13 +4,13 @@ import { IBlog } from "./../../../interfaces";
 export const blogData: IBlog[] = [
   {
     id: 1,
-    tag: "Angular App",
-    title: "Near Earth Asteroids!",
-    date: "Nov 12, 2022",
-    internallink: "/projects",
+    tag: "Notice",
+    title: "Renovation for fire water pipeline",
+    date: "March 13, 2024",
+    internallink: "/",
     externallink: "",
-    navImage: "/images/blog1.jpg",
-    brief: "Discover the universe with the Near Earth Asteroids app. This powerful tool provides you with real-time information on asteroids that come close to Earth. With our app, you can track the orbit and approach of near-Earth asteroids, view detailed information and images of each asteroid, and receive alerts for potential impact events. The app also includes a map view to see the location of asteroids in relation to Earth and a news feed for the latest updates on asteroid research and observations. Whether you're an asteroid enthusiast or just curious about space, the Near Earth Asteroids app is a must-have for anyone interested in the study of asteroids and their potential impact on Earth."
+    navImage: "/images/blog2big.pdf",
+    brief: "Decision was adopted in the meeting of the Managers of Board held on 25.02.2024 in connection with the colouring / renovation of the fire water pipelines and removal of flower tubes places adjacent to those pipes as said above."
   },
   {
     id: 2,
