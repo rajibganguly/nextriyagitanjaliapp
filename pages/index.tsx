@@ -1,12 +1,6 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import react, { useState, useEffect, useRef } from "react";
-import Header from "./../components/Header";
-import Blogs from "./../components/Blogs";
-import RiyaGit from "./../components/RiyaGit";
-import Footer from "../components/Footer";
-import TutorialsSection from "../components/Tutorials";
-import { DashboardBanner } from "./../utils/dashboard-banners";
 
 const IndexPage = () => {
   const [ code, setCode] = useState("");
@@ -17,7 +11,7 @@ const IndexPage = () => {
   const handlerEnter = (event) => {
     if(event.keyCode === 13) {
       if(code === "rg") {
-        localStorage.setItem("user", JSON.stringify({id: "1", name: "rg", code: "rg"}));
+        localStorage.setItem("user", JSON.stringify({id: "178", name: "rg", code: "rg"}));
         window.location.href="/all";
       }
       else {

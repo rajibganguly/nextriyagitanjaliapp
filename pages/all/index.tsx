@@ -8,6 +8,7 @@ import Blogs from "../../components/Blogs";
 import Footer from "../../components/Footer";
 import TutorialsSection from "../../components/Tutorials";
 import { DashboardBanner } from "../../utils/dashboard-banners";
+import { DashboardCards } from "../../utils/dashboard-banners";
 import HeadBanner from "../../components/sub-components/headbanner";
 
 const AllOwnersPage = () => {
@@ -38,7 +39,7 @@ const AllOwnersPage = () => {
           <h1 style={dashBoardStyle}>RIYA-GITANJALI</h1>
         </div>
         <div className="container">
-          <RiyaGit />
+          <RiyaGit props={DashboardCards} />
         </div>
         <div className="container">
           <Footer />

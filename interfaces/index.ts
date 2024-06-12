@@ -10,6 +10,14 @@ export type User = {
   code?: string;
 };
 
+export type NewUser = {
+  id: number,
+  role_type: string,
+  registered_mobile: number,
+  registered_email?: string,
+  created_at: string
+};
+
 export interface IProjects {
   name: string; // input text
   projectid: string; //uuid auto generate
