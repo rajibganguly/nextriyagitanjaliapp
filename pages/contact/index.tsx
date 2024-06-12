@@ -7,9 +7,11 @@ import Button from "@mui/material/Button";
 import { useState } from "react";
 
 function ContactPage() {
-  const [formData, setFormData] = useState<{name:string,email:string}>({
+  const [formData, setFormData] = useState<{name:string,email:string,phone:string,comments:string}>({
     name: "",
     email: "",
+    phone: "",
+    comments: ""
   });
 
   async function postData(url = "", data = "") {
@@ -39,7 +41,7 @@ function ContactPage() {
 
 
   const handleSubmit = () => {
-    postData("/api/sendEmail", JSON.stringify(formData)).then((d) => {
+    postData(`${process.env.BACKEND_URL}/sendEmail`, JSON.stringify(formData)).then((d) => {
       console.log(formData, d);
     })
   };
@@ -54,8 +56,17 @@ function ContactPage() {
         <div className="container">
           <div className="row align-items-md-stretch">
             <div className="col-md-6">
-              <div className="h-100 p-5 text-bg-info rounded-3">
-                <h2>Google Map</h2>
+              <div className="h-100 p-5 rounded-3">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.1039681926836!2d88.41625772508361!3d22.761522579357525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89998d6c75e85%3A0x111e9e8fb3461f50!2sRIYA%20GITANJALI%2C%20Ruiya%2C%20West%20Bengal%20700121!5e0!3m2!1sen!2sin!4v1718197982583!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
+                  style={{ border: 0 } as React.CSSProperties}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+                
               </div>
             </div>
             <div className="col-md-6">
@@ -70,6 +81,7 @@ function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
+                      fullWidth={true}
                     />
                     </div>
                     <div className="form-group py-2">
@@ -79,6 +91,29 @@ function ContactPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      aria-readonly
+                      fullWidth={true}
+                    />                      
+                    </div>
+                    <div className="form-group py-2">
+                    <TextField
+                      label="Phone"
+                      variant="outlined"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      aria-readonly
+                      fullWidth={true}
+                    />                      
+                    </div>
+                    <div className="form-group py-2">
+                    <TextField
+                      label="comments"
+                      variant="outlined"
+                      name="comments"
+                      value={formData.comments}
+                      onChange={handleChange}
+                      fullWidth={true}
                     />                      
                     </div>
                     <div className="form-group">
