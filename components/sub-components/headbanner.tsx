@@ -45,12 +45,12 @@ function HeadBanner() {
       >
         <div className="col-lg-6 px-0">
           <h1 className="display-4 fst-italic">
-            Riya Gitanjali | consists of 206 units spanned over 7 towers
+          {process.env.APP_NAME} | consists of 206 units spanned over 7 towers
           </h1>
           <p className="lead my-3">
-            Riya Gitanjali is a project by Riya Projects located in the prime
+          {process.env.APP_NAME} is a project by Riya Projects located in the prime
             area of Barrackpore, Kolkata offering simple and aesthetically
-            designed 1 BHK and 2 BHK apartments. Riya Gitanjali price rate
+            designed 1 BHK and 2 BHK apartments. {process.env.APP_NAME} price rate
             starts from Rs. 12.9 Lac onward..
           </p>
           <p className="lead mb-0">

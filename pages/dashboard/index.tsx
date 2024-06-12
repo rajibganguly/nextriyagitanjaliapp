@@ -11,7 +11,7 @@ import { DashboardBanner } from "../../utils/dashboard-banners";
 import { DashboardCards } from "../../utils/dashboard-banners";
 import HeadBanner from "../../components/sub-components/headbanner";
 
-const AllOwnersPage = () => {
+const Dashboard = () => {
   const bgImgList = DashboardBanner;
 
   let dashBoardStyle = {
@@ -36,7 +36,8 @@ const AllOwnersPage = () => {
           <HeadBanner />
         </div>        
         <div className="container">
-          <h1 style={dashBoardStyle}>RIYA-GITANJALI</h1>
+        <h3 className="text-muted">{process.env.APP_NAME}</h3>
+        <p>The project is location in heart of Barrackpore Barasat. </p>
         </div>
         <div className="container">
           <RiyaGit props={DashboardCards} />
@@ -49,4 +50,4 @@ const AllOwnersPage = () => {
   );
 };
 
-export default AllOwnersPage;
+export default Dashboard;

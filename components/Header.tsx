@@ -2,6 +2,8 @@ import React, { useState, ReactNode } from "react";
 import Layout from "../components/Layout";
 import Link from "next/link";
 import Head from "next/head";
+import Image from 'next/image';
+import logo from './../public/images/logo.png';
 
 const Header = () => {
   const [mobNan, setMobNav] = useState(false);
@@ -36,7 +38,7 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <a className="navbar-brand" href="/">
-            Riya Gitanjali..
+            <Image src={logo} width={128} height={74} alt="Riya gitanjali Logo" />
           </a>
           <div
             style={collapse}
@@ -45,7 +47,7 @@ const Header = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link href="/all" className="nav-link active">
+                <Link href="/dashboard" className="nav-link active">
                   RG Owners
                 </Link>
               </li>
@@ -62,11 +64,6 @@ const Header = () => {
               <li className="nav-item">
                 <Link href="/requests" className="nav-link">
                   Request
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/explore" className="nav-link">
-                  Explorer
                 </Link>
               </li>
               <li className="nav-item">
