@@ -116,7 +116,7 @@ const Register: React.FC = () => {
     return errors;
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -124,12 +124,45 @@ const Register: React.FC = () => {
     } else {
       // Replace this with your registration logic
       console.log("Form Data:", formData);
-
-      // Navigate to a different page upon successful registration
-      alert("Registration successful!");
-      router.push("/");
+      postRegistration(formData)
     }
   };
+
+  const postRegistration = async(obj: any) => {
+    const token = '';
+
+    const myHeaders = new Headers();
+    myHeaders.append("authorization", "Bearer " + token);
+    myHeaders.append("content-type", "application/json");
+
+    const raw = JSON.stringify({
+      "email": obj.email,
+      "password": obj.password,
+      "name": obj.fullName,
+      "role_type": obj.roleType,
+      "payment": false,
+      "phone_number": obj.mobileNumber,
+      "blockflat": obj.blockNumber + "-" + obj.flatFloorNumber,
+      "timestamp": new Date().toISOString()
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw
+    };
+
+    fetch("/api/users", requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(result);
+        // Navigate to a different page upon successful registration
+        alert("Registration successful!");
+        router.push("/");
+      })
+      .catch((error) => console.error(error));
+
+  }
 
   return (
     <div className="container" style={styled}>

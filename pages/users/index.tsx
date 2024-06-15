@@ -1,41 +1,39 @@
-import { GetStaticProps } from "next";
-import Link from "next/link";
-
-import { User } from "../../interfaces";
-import { sampleUserData } from "../../utils/sample-data";
-import Layout from "../../components/Layout";
-import List from "../../components/List";
+import { useState, useEffect } from "react";
 import Header from "../../components/Header";
 
-type Props = {
-  items: User[];
-};
+export default function Users() {
+  const [users, setUsers] = useState([]);
 
-const WithStaticProps = ({ items }: Props) => (
-  <>
-    <div className="container-fluid">
-      <div className="container">
-        <Header />
-      </div>
-      <div className="container">
-        <h1>banner cambo box</h1>
-      </div>
-      <div className="container">
-        <div>body</div>
-      </div>
-      <div className="container">
-        <footer>Footer</footer>
+  useEffect(() => {
+    const response = fetch("/api/users");
+    response.then(async(result) => {
+      const userResult = result
+      const data = await userResult.json();
+      setUsers(data);
+    })
+    
+  }, []);
+
+  return (
+    <div>
+      <div className="container-fluid">
+        <div className="container">
+          <Header />
+        </div>
+        <div className="container">
+          <h1>banner cambo box</h1>
+        </div>
+        <div className="container">
+          <ul>
+            {users.map((user) => (
+              <li key={user._id}>{user.name}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="container">
+          <footer>Footer</footer>
+        </div>
       </div>
     </div>
-  </>
-);
-
-export const getStaticProps: GetStaticProps = async () => {
-  // Example for including static props in a Next.js function component page.
-  // Don't forget to include the respective types for any props passed into
-  // the component.
-  const items: User[] = sampleUserData;
-  return { props: { items } };
-};
-
-export default WithStaticProps;
+  );
+}

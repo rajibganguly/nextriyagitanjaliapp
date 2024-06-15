@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { NewUser } from '../../interfaces';
 
 
 const UserRegistration = () => {

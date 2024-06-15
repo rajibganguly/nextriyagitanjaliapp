@@ -8,6 +8,7 @@ const Footer = () => {
     borderImage:
       "url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg) 90 round",
   };
+  const appName = process.env.APP_NAME;
   return (
     <>
       <div className="container" style={styled}>
@@ -16,12 +17,12 @@ const Footer = () => {
             <div className="col-md-5 col-xs-12 mb-4">
               <h5>About:</h5>
               <p className="nav flex-column">
-              {process.env.APP_NAME} is developed with a touch of Bengal which will
+              {appName} is developed with a touch of Bengal which will
                 give a feeling of a close community to all the residents. The
                 project is surrounded with a lot of greenery and a scenic view
                 the occupants can enjoy by having a walk around the property.
-                {process.env.APP_NAME} has good connectivity and is 20 min from Barasat.
-                {process.env.APP_NAME} vicinity includes several basic utilities like
+                {appName} has good connectivity and is 20 min from Barasat.
+                {appName} vicinity includes several basic utilities like
                 Barrackpore Math Para Bus Stop, Barrackpore Railway Station, St
                 Claret School, Doctor BN Bose State General Hospital, HDFC Bank
                 ATM, Viraat Bazaar, Apollo Pharmacy, Dada Boudi Hotel, Atindra
