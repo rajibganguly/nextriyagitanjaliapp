@@ -12,19 +12,43 @@ const Login = () => {
     margin: "15px",
   };
 
+  const [role, setRole] = useState("");
+
+  const handleRoleChange = (e) => {
+    setRole(e.target.value);
+  };
+
+  const token = "";
+
+  const myHeaders = new Headers();
+  // myHeaders.append("authorization", "Bearer " + token);
+  myHeaders.append("content-type", "application/json");
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Replace this with your authentication logic
-    const loginPayload = {
-        email: email,
-        password: password,
-        roleType: "owner"
-    }
-    console.log("login:", loginPayload);
+    const loginPayload = JSON.stringify({
+      email: email,
+      password: password,
+      role_type: role,
+    });
 
-    // Navigate to the /about page upon successful login
-    router.push("/dashboard");
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: loginPayload,
+    };
+
+    fetch("/api/login", requestOptions)
+      .then((result) => {
+        console.log(result);
+        // Navigate to a different page upon successful registration
+        alert("Login successful!");
+        // Navigate to the /about page upon successful login
+        router.push("/dashboard");
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -54,6 +78,35 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
+          </div>
+          <div className="form-group">
+            <label htmlFor="role">Role</label>
+            <div className="d-flex">
+            <div className="form-check mr-3">
+              <input
+                type="radio"
+                id="adminRole"
+                name="role"
+                value="admin"
+                checked={role === "admin"}
+                onChange={handleRoleChange}
+                required
+              />
+              <label htmlFor="adminRole"> Admin</label>
+            </div>
+            <div className="form-check">
+              <input
+                type="radio"
+                id="ownerRole"
+                name="role"
+                value="owner"
+                checked={role === "owner"}
+                onChange={handleRoleChange}
+                required
+              />
+              <label htmlFor="ownerRole"> Owner</label>
+            </div>
+            </div>
           </div>
           <div className="form-action mt-2">
             <button type="submit" className="btn btn-primary">

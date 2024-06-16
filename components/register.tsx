@@ -15,8 +15,8 @@ interface FormData {
 const Register: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: "",
-    blockNumber: "1",
-    flatFloorNumber: "1A",
+    blockNumber: "",
+    flatFloorNumber: "",
     mobileNumber: "",
     email: "",
     password: "",
@@ -25,7 +25,6 @@ const Register: React.FC = () => {
   });
   const styled = {
     borderTop: "5px solid #eee",
-    borderBottom: "5px solid #eee",
     padding: "15px",
     margin: "15px",
   };
@@ -132,14 +131,14 @@ const Register: React.FC = () => {
     const token = '';
 
     const myHeaders = new Headers();
-    myHeaders.append("authorization", "Bearer " + token);
+    // myHeaders.append("authorization", "Bearer " + token);
     myHeaders.append("content-type", "application/json");
 
     const raw = JSON.stringify({
       "email": obj.email,
       "password": obj.password,
       "name": obj.fullName,
-      "role_type": obj.roleType,
+      "role_type": "owner",
       "payment": false,
       "phone_number": obj.mobileNumber,
       "blockflat": obj.blockNumber + "-" + obj.flatFloorNumber,
@@ -152,13 +151,13 @@ const Register: React.FC = () => {
       body: raw
     };
 
-    fetch("/api/users", requestOptions)
+    fetch("/api/register", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         console.log(result);
         // Navigate to a different page upon successful registration
         alert("Registration successful!");
-        router.push("/");
+        router.push("/login");
       })
       .catch((error) => console.error(error));
 
@@ -290,10 +289,9 @@ const Register: React.FC = () => {
             required
           >
             <option value="owner">Owner</option>
-            <option value="admin">Admin</option>
           </select>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary mt-2">
           Register
         </button>
       </form>
