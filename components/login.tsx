@@ -6,8 +6,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const styled = {
-    borderTop: "5px solid #ee3344",
-    borderBottom: "5px solid #ee3344",
+    borderTop: "5px solid rgb(120 83 73)",
+    borderBottom: "5px solid rgb(120 83 73)",
     padding: "15px",
     margin: "15px",
   };
@@ -18,13 +18,23 @@ const Login = () => {
     setRole(e.target.value);
   };
 
+  interface IResultObject {
+    id: string,
+    email: string,
+    name: string,
+    role_type: string
+    payment: boolean,
+    phone_number: string,
+    blockflat: string
+}
+
   const token = "";
 
   const myHeaders = new Headers();
   // myHeaders.append("authorization", "Bearer " + token);
   myHeaders.append("content-type", "application/json");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Replace this with your authentication logic
@@ -40,13 +50,20 @@ const Login = () => {
       body: loginPayload,
     };
 
-    fetch("/api/login", requestOptions)
-      .then((result) => {
-        console.log(result);
-        // Navigate to a different page upon successful registration
-        alert("Login successful!");
-        // Navigate to the /about page upon successful login
-        router.push("/dashboard");
+    await fetch("/api/login", requestOptions)
+    .then(result => result.json())
+      .then(async(result: any | { success: boolean, message: string, data: IResultObject} ) => {
+        const response = result.data;
+        if(result && response) {
+          console.log(result, response);
+          await localStorage.setItem('user', JSON.stringify(response))
+          // Navigate to a different page upon successful registration
+          alert("Login successful! Welcome to dashboard.");
+          // Navigate to the /about page upon successful login
+          router.push("/dashboard");
+        } else {
+          router.push("/login");
+        }
       })
       .catch((error) => console.error(error));
   };

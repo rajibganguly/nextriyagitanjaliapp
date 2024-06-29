@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React, { useState, useEffect, ReactNode } from "react";
 import { useRouter } from 'next/router';
 
 export interface IRecords {
@@ -12,6 +12,28 @@ export interface IRecords {
 
 function RiyaGit({props}) {
   const router = useRouter();
+  const [localObj, setLocalObj] = useState({
+    blockflat: '',
+    email:"",
+    id: "",
+    name: "",
+    payment: false,
+    phone_number: "",
+    role_type: ""
+  })
+
+  useEffect(() => {
+    const localuser = localStorage.getItem('user');
+    let myUser;
+
+    if(localuser) {
+      myUser = JSON.parse(localuser)
+      setLocalObj(myUser)    
+    }
+
+    
+
+  }, [])
 
   const handleClick = (source: IRecords) => {
     router.push(source.route);

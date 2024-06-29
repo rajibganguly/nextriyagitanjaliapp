@@ -20,8 +20,8 @@ const LoginPage = () => {
       </div>
       <div className="container">
         <h6>
-          <a href="/login" className="btn btn-light">Login</a> | 
-          <a href="/register" className="btn btn-light">Register</a>
+          <a href="/login" className="btn btn-link">Login</a> | 
+          <a href="/register" className="btn btn-link">Register</a>
         </h6>
           <Login />
         </div>

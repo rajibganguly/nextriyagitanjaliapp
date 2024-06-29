@@ -5,11 +5,13 @@ import Header from "../../components/Header"
 import Footer from "../../components/Footer";
 import HeadBanner from "../../components/sub-components/headbanner";
 import { Tabs, Tab, Box, Typography } from '@mui/material';
+import { CONTEXT } from "../../public/context";
 
 
 
 const PaymentPage = () => {
   const [value, setValue] = useState(0);
+  const app_name = CONTEXT.appName;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -26,7 +28,7 @@ const PaymentPage = () => {
         </div>        
         <div className="container">
         <h3 className="text-muted">My Payments</h3>
-        <p>You can pay all the paymets to {process.env.APP_NAME}. </p>
+        <p>You can pay all the paymets to {app_name}. </p>
         
         <Box sx={{ width: '100%' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">

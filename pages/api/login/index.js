@@ -33,6 +33,7 @@ export default async function handler(req, res) {
     }
 
     const returnData = {
+      id: user._id,
       email: user.email,
       name: user.name,
       role_type: user.role_type,

@@ -16,7 +16,25 @@ const IndexPage = () => {
     <>
       <div className="container-fluid">
         <div className="container">
-          <Image src={logo} width={128} height={74} alt="Riya gitanjali Logo" />
+          <div className="d-flex align-items-start justify-content-between">
+            <Image src={logo} width={128} height={74} alt="Riya gitanjali Logo" />
+            <div>Established on 2021</div>
+
+            <div>
+              <button
+                className="btn btn-light mr-2"
+                onClick={() => router.push("/login")}
+              >
+                Login
+              </button>
+              <button
+                className="btn btn-dark"
+                onClick={() => router.push("/register")}
+              >
+                Register
+              </button>
+            </div>
+          </div>
         </div>
         <div className="container-fluid">
           <div
@@ -30,11 +48,12 @@ const IndexPage = () => {
               className="row mb-3"
               style={{ width: "80%", marginTop: "2%" }}
             >
+
               <figure>
-              <img src="https://image.slidesharecdn.com/geetanjali-200724202750/75/GEETANJALI-BY-RABINDRANATH-TAGORE-1-2048.jpg"
-              style={{width: "100%", padding: "10px 0"}}
-              alt="riyaGitanjali"
-              />
+                <img src="https://image.slidesharecdn.com/geetanjali-200724202750/75/GEETANJALI-BY-RABINDRANATH-TAGORE-1-2048.jpg"
+                  style={{ width: "100%", padding: "10px 0" }}
+                  alt="riyaGitanjali"
+                />
               </figure>
               <p>
                 <strong>Rabindranath Tagore</strong>, the revered poet and Nobel laureate, was
@@ -83,22 +102,6 @@ const IndexPage = () => {
                 depth of human emotions and relationships, weaving a narrative
                 that resonates across cultures and generations.
               </p>
-              <hr />
-              <p>Login now!</p>
-              <div>
-                <button
-                  className="btn btn-light mr-2"
-                  onClick={() => router.push("/login")}
-                >
-                  Login
-                </button>
-                <button
-                  className="btn btn-dark"
-                  onClick={() => router.push("/register")}
-                >
-                  Register
-                </button>
-              </div>
             </div>
           </div>
         </div>

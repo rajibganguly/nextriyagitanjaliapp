@@ -1,5 +1,6 @@
 import react, { useEffect, useState } from "react";
 import { DashboardBanner } from "../../utils/dashboard-banners";
+import { CONTEXT } from "../../public/context";
 
 function HeadBanner() {
   const bgImgList = DashboardBanner;
@@ -9,6 +10,8 @@ function HeadBanner() {
   let bgImage = {
     backgroundImage: bannerImg,
   }; 
+
+  const app_name = CONTEXT.appName
 
   const doSetTimeout = (startIndex: number = 0) => {
     let currentIndex: number = startIndex;
@@ -45,12 +48,12 @@ function HeadBanner() {
       >
         <div className="col-lg-6 px-0">
           <h1 className="display-4 fst-italic">
-          {process.env.APP_NAME} | consists of 206 units spanned over 7 towers
+          {app_name} | consists of 206 units spanned over 7 towers
           </h1>
           <p className="lead my-3">
-          {process.env.APP_NAME} is a project by Riya Projects located in the prime
+          {app_name} is a project by Riya Projects located in the prime
             area of Barrackpore, Kolkata offering simple and aesthetically
-            designed 1 BHK and 2 BHK apartments. {process.env.APP_NAME} price rate
+            designed 1 BHK and 2 BHK apartments. {app_name} price rate
             starts from Rs. 12.9 Lac onward..
           </p>
           <p className="lead mb-0">

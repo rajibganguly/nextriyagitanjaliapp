@@ -24,7 +24,7 @@ const Register: React.FC = () => {
     roleType: "owner",
   });
   const styled = {
-    borderTop: "5px solid #eee",
+    borderTop: "5px solid rgb(120 83 73)",
     padding: "15px",
     margin: "15px",
   };
