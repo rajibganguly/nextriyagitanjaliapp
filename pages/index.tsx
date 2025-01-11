@@ -11,104 +11,77 @@ import { useRouter } from "next/router";
 
 const IndexPage = () => {
   const router = useRouter();
+  
+  const background = {
+    backgroundImage: "url('/images/bgimg.png')",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center 137px"
+}
 
+const size = {
+  width:"700px",
+  height:"500px"
+}
+
+const gotoDashboard = () => {
+  router.push('/dashboard');
+}
   return (
     <>
-      <div className="container-fluid">
-        <div className="container">
-          <div className="d-flex align-items-start justify-content-between">
-            <Image src={logo} width={128} height={74} alt="Riya gitanjali Logo" />
-            <div>Established on 2021</div>
-
-            <div>
-              <button
-                className="btn btn-light mr-2"
-                onClick={() => router.push("/login")}
-              >
-                Login
-              </button>
-              <button
-                className="btn btn-dark"
-                onClick={() => router.push("/register")}
-              >
-                Register
-              </button>
+    <section>
+    <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary" style={background}>
+            <div className="col-md-6 p-lg-5 mx-auto my-5">
+              <h1 className="display-3 fw-bold">Riya Gitanjali Society</h1>
+              <h3 className="fw-normal text-muted mb-3">Empowering Communities, Enriching Lives.</h3>
+              <div className="d-flex gap-3 justify-content-center lead fw-normal">
+                <Link className="icon-link" href="/">
+                  Available for buy
+                  
+                </Link>
+                <Link className="icon-link" href="/">
+                  Rent
+                  
+                </Link>
+              </div>
+            </div>
+            <div className="product-device shadow-sm d-none d-md-block"></div>
+            <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+          </div>
+    </section>
+    <section>
+        <div className="container col-xxl-8 px-4 py-5">
+            <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div className="col-10 col-sm-8 col-lg-6">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipOC4Kt7BZPsuNJGoUzbk62iQmcKpcFSXlGch5JZ=s1360-w1360-h1020" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style={size} loading="lazy" />
+              </div>
+              <div className="col-lg-6">
+                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Riya Gitanjali | consists of 206 units spanned over 7 towers</h1>
+                <p className="lead">Riya Gitanjali is a project by Riya Projects located in the prime area of Barrackpore, Kolkata offering simple and aesthetically designed 1 BHK and 2 BHK apartments. Riya Gitanjali price rate starts from Rs. 12.9 Lac onward.</p>
+                <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" className="btn btn-primary btn-lg px-4 me-md-2" onClick={gotoDashboard}>Dashboard</button>
+                  <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container-fluid">
-          <div
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div
-              className="row mb-3"
-              style={{ width: "80%", marginTop: "2%" }}
-            >
-
-              <figure>
-                <img src="https://image.slidesharecdn.com/geetanjali-200724202750/75/GEETANJALI-BY-RABINDRANATH-TAGORE-1-2048.jpg"
-                  style={{ width: "100%", padding: "10px 0" }}
-                  alt="riyaGitanjali"
-                />
-              </figure>
-              <p>
-                <strong>Rabindranath Tagore</strong>, the revered poet and Nobel laureate, was
-                also a masterful storyteller. One of his enchanting stories is
-                "The Kabuliwala," a poignant tale of friendship and separation.
-              </p>
-              <p>
-                In the bustling streets of early 20th century Kolkata, a little
-                girl named Mini lived with her father, a writer. Mini was a
-                vivacious child, always curious and brimming with questions. One
-                day, while peering out of her window, she spotted a tall,
-                turbaned figure making his way through the crowd. This was
-                Rahmat, the Kabuliwala, a peddler from Afghanistan who roamed
-                the streets selling dry fruits and spices. Mini's innocent
-                curiosity drew her to Rahmat, and soon, an unlikely friendship
-                blossomed between the little girl and the burly Afghan. Rahmat,
-                with his gruff exterior, had a soft spot for children, reminded
-                of his own daughter back in Kabul. He would bring Mini almonds,
-                raisins, and stories from his faraway land, and in return, Mini
-                would entertain him with her endless chatter.
-              </p>
-              <p>
-                Mini's father observed this friendship with a mix of amusement
-                and affection. He saw in Rahmat a gentle giant who, despite the
-                harshness of his trade, harbored a heart full of love and
-                longing for his homeland and family. One day, Rahmat arrived at
-                Mini's house in distress. He had been involved in a skirmish and
-                was arrested, accused of assaulting a customer who had tried to
-                cheat him. As he was led away by the police, he handed Mini's
-                father a small bundle to keep for his daughter, promising he
-                would return for it someday. Years passed. Mini grew up, the
-                memory of her Kabuliwala fading with time. On the day of her
-                wedding, Rahmat returned, now a gray-haired, weary man. He
-                hesitated at the door, his eyes searching for the little girl he
-                once knew. Mini's father recognized him and welcomed him inside.
-                Rahmat's eyes filled with tears as he saw the grown-up Mini in
-                her bridal attire, no longer the child who used to sit on his
-                lap. He handed her the bundle he had entrusted years ago. Inside
-                were dry fruits and a small handprint of his daughter, a relic
-                from his distant home. Moved by his enduring love and loyalty,
-                Mini's father gave Rahmat some money to return to his homeland.
-                As Rahmat left, there was a silent acknowledgment of the
-                profound connection that transcended time and distance—a
-                reminder of the enduring power of friendship and love. "The
-                Kabuliwala" is a testament to Tagore's ability to capture the
-                depth of human emotions and relationships, weaving a narrative
-                that resonates across cultures and generations.
-              </p>
+    </section>
+    <section>
+        <div className="container col-xxl-8 px-4 py-5">
+            <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div className="col-lg-6">
+                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Riya Gitanjali | consists of 206 units spanned over 7 towers</h1>
+                <p className="lead">Riya Gitanjali is a project by Riya Projects located in the prime area of Barrackpore, Kolkata offering simple and aesthetically designed 1 BHK and 2 BHK apartments. Riya Gitanjali price rate starts from Rs. 12.9 Lac onward.</p>
+                <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" className="btn btn-primary btn-lg px-4 me-md-2" onClick={gotoDashboard}>Dashboard</button>
+                  <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
+                </div>
+              </div>
+              <div className="col-10 col-sm-8 col-lg-6">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipOC4Kt7BZPsuNJGoUzbk62iQmcKpcFSXlGch5JZ=s1360-w1360-h1020" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style={size} loading="lazy" />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="container">
-          <Footer />
-        </div>
-      </div>
+    </section>
     </>
   );
 };

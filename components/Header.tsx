@@ -23,6 +23,7 @@ const Header = () => {
         <title>RiyaGitanjali</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    
       </Head>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
