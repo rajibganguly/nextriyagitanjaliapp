@@ -21,8 +21,7 @@ const IndexPage = () => {
 }
 
 const size = {
-  width:"700px",
-  height:"500px"
+  width:"auto",
 }
 
 const gotoDashboard = () => {
@@ -104,8 +103,18 @@ const gotoDashboard = () => {
                 <img src="./images/landingpageimages/Screenshot2-2025.jpg" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style={size} loading="lazy" />
               </div>
               <div className="col-lg-6">
-                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Riya Gitanjali | consists of 206 units spanned over 7 towers</h1>
-                <p className="lead">Riya Gitanjali is a project by Riya Projects located in the prime area of Barrackpore, Kolkata offering simple and aesthetically designed 1 BHK and 2 BHK apartments. Riya Gitanjali price rate starts from Rs. 12.9 Lac onward.</p>
+                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Republic Day Celebration on 26th January 2025</h1>
+                <p className="lead">
+                Programme schedule :<br/>
+                9:00 a.m. Flag Hoisting by Nihar Ranjan Sinha accompanied by President. <br/>
+                9:05 a.m. National Anthem <br/>
+                9:10 a.m. Vice President's speech on Republic Day.<br/>
+                9:20 a.m.  Garlanding on  Netaji , M. K. Gandhi, Baba Saheb Ambedkar.<br/>
+                9:30 a.m. Republic Day speech by any College/School student. <br/>
+                9:40 a.m. Cultural Programme ( Now it is tentative, programme schedule will be finalised shortly)<br/>
+                10:20 a.m. Valediction speech by President.<br/>
+                10:30 a.m. Refreshment.<br/>
+                </p>
                 
               </div>
             </div>
@@ -115,8 +124,24 @@ const gotoDashboard = () => {
         <div className="container col-xxl-8 px-4 py-5">
             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
               <div className="col-lg-6">
-                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Festive Comitee Organised Dinner</h1>
-                <p className="lead">Riya Gitanjali Festival Committee hosted a delightful dinner for Owners, offering an array of scrumptious vegetarian and non-vegetarian dishes, creating an evening filled with warm camaraderie, joyous celebration, and mouth-watering culinary delights.</p>
+                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Festive Comitee Organised List Chart: 2025</h1>
+                <p className="lead">
+                We are pleased to inform you that we have already started our festivals with khuti puja. 
+This year, 15th August, and Republic Day ( 26th January ) will be arranged on behalf of the Association. 
+All the enlisted festivals are as mentioned below. 
+                </p>
+                <ol>
+                  <li>Durga Puja </li>
+                  <li>Laxmi Puja </li>
+                  <li>Kali Puja </li>
+                  <li>Chhath Puja </li>
+                  <li>Christmas</li> 
+                  <li>31st December </li>
+                  <li>Saraswati Puja </li>
+                  <li>Holi </li>
+                  <li>Eid- Ul - Fitre </li>
+                  <li>Rabindra Nazrul Sandhya</li>
+                </ol>
                 
               </div>
               <div className="col-10 col-sm-8 col-lg-6">
