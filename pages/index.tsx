@@ -96,6 +96,25 @@ const gotoDashboard = () => {
             </div>
           </div>
     </section>
+    <section className="container my-5">
+        <div className="row p-4 pb-0pe-lg-0pt-lg-5 align-items-center rounded-3 border shadow-lg">
+              <div className="col-lg-4 p-0 overflow-hidden shadow-lg">
+                <img src="./images/landingpageimages/Screenshot5-2025.jpg" className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" style={size} loading="lazy" />
+              </div>
+              
+              <div className="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Celebration Godess Saraswati on 2nd Feb. 2025</h1>
+                <p className="lead">
+                Welcome All Gitanjalian :<br/>
+                On this auspicious occasion of Saraswati Puja, we extend a heartfelt welcome to everyone. On 2nd Feb. 2025, Sunday at 12:15 PM, we come together to celebrate the divine presence of Goddess Saraswati, the embodiment of knowledge, wisdom, and art. May her blessings guide us toward enlightenment and success in all our endeavors.<br/>
+                Let us immerse ourselves in devotion and seek her grace to illuminate our minds and hearts. Together, let's make this celebration a harmonious and joyous event.<br/>
+                Welcome, one and all!.<br/>
+                </p>
+                
+              </div>
+            
+          </div>
+    </section>
     <section>
         <div className="container col-xxl-8 px-4 py-5">
             <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
