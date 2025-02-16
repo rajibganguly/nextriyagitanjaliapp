@@ -13,11 +13,12 @@ const IndexPage = () => {
   const router = useRouter();
   
   const background = {
-    backgroundImage: "url('/images/landingpageimages/Screenshot4-2025.jpg')",
+    //backgroundImage: "url('/images/landingpageimages/Screenshot4-2025.jpg')",
+    backgroundImage: "url('/images/landingpageimages/geetanjali.png')",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "163px 0",
+    //backgroundPosition: "163px 0",
     backgroundSize: "contain",
-    backgroundColor: "#f3f3f5 !important"
+    backgroundColor: "#81c6a6 !important"
 }
 
 const size = {
@@ -32,7 +33,7 @@ const gotoDashboard = () => {
     <section>
     <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary" style={background}>
             <div className="col-md-6 p-lg-5 mx-auto my-5">
-              <h1 className="display-3 fw-bold">Inquire today!</h1>
+              <h1 className="display-3 fw-bold">RIYA GItanjali Society</h1>
               <h3 className="fw-normal text-muted mb-3">Explore the vibrant, inclusive community</h3>
               <div className="d-flex gap-3 justify-content-center lead fw-normal">
                 <Link className="icon-link" href="/buy">

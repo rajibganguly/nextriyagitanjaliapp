@@ -23,7 +23,21 @@ const Header = () => {
         <title>RiyaGitanjali</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    
+        <meta name="copyright" content="riyaGitanjali" />
+        <meta name="description" content="Website offering some details about Riya Gitanjali Society and Gitanjalians" />
+        <meta name="keywords" content="Modibai, Barrackpore, Flats, Buy Flats near Barrackpore, Barasat Appartments, Society" />
+        <meta name="author" content="nextriyagitanjaliapp.vercel.app" />
+        <meta name="robots" content="application, web apps, modibari, barrackpore, Rajib Ganguly" />
+        <meta name="url" content="nextriyagitanjaliapp.vercel.app/" />
+        <meta name="DC.title" content="Society Application" />
+        <meta property="og:title" content="Society near Modibari" />
+        <meta property="og:description" content="Riya Gitanjali Website" />
+        <meta property="og:url" content="./favicon.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="./favicon.jpg" />
+        <meta property="og:site_name" content="w3earth society Web App" />
+        <link rel="icon" type="image/x-icon" href="./favicon.jpg" />
       </Head>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
