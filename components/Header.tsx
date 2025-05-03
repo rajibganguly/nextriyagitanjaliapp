@@ -62,12 +62,17 @@ const Header = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link href="/dashboard" className="nav-link active">
+                <Link href="/dashboard" className="nav-link">
+                  Dashboard
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/rgowners" className="nav-link">
                   RG Owners
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/rules" className="nav-link active">
+                <Link href="/rules" className="nav-link">
                   Rules
                 </Link>
               </li>

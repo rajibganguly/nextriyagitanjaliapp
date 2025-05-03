@@ -20,9 +20,9 @@ export const DashboardCards: any[] = [
     {
       "id": 2,
       "image": "https://cdn.pixabay.com/photo/2013/11/20/23/03/bell-214297_1280.jpg",
-      "txt": "Are you in trouble? Need an immediate phone number, email ID or address?",
-      "tag": "Urgent",
-      "route": "/"
+      "txt": "Notice board for urgent messages, events, and important information.",
+      "tag": "Owners",
+      "route": "/rgowners"
     },
     {
       "id": 3,
@@ -68,13 +68,6 @@ export const DashboardCards: any[] = [
     },
     {
       "id": 9,
-      "image": "https://pikwizard.com/pw/medium/925d8fbddc67a66920df7edf7e32d12c.avif",
-      "txt": "Search inside RiyaGitanjali with a name, surname, profession, or vehicle number, or anything else",
-      "tag": "Search",
-      "route": "/"
-    },
-    {
-      "id": 10,
       "image": "https://images.pexels.com/photos/6694569/pexels-photo-6694569.jpeg",
       "txt": "Do you want to pay monthly maintenance charges or a Festival subscription online?",
       "tag": "Payments",

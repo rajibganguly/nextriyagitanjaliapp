@@ -6,9 +6,11 @@ import Blogs from "../../components/Blogs";
 import TutorialsSection from "../../components/Tutorials";
 
 const RulesPage = () => {
-  let bgStyle = {
-    background: "linear-gradient(105deg, #f5f5f5, #f0f0f0)",
-  };
+  
+  const font100 = {
+    fontWeight: "100"
+}
+
 
   let dashBoardStyle = {
     fontWeight: "100",
@@ -22,14 +24,11 @@ const RulesPage = () => {
         <Header />
       </div>
       <div className="container">
-        <h1>Rules & Regulation</h1>
+      <h1 style={font100}>Rules & Regulation</h1>
+        <h1></h1>
       </div>
       <div className="container">
           <Blogs />
-        </div>
-        <div className="container-fluid" style={bgStyle}>
-          <h1 style={dashBoardStyle}>TUTORIAL</h1>
-          <TutorialsSection />
         </div>
       <div className="container">
         <Footer />

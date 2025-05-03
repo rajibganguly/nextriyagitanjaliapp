@@ -39,8 +39,7 @@ const Dashboard = () => {
           <HeadBanner />
         </div>        
         <div className="container">
-        <h3 className="text-muted">{app_name}</h3>
-        <p>The project is location in heart of Barrackpore Barasat. </p>
+        <h3 className="text-muted mb-3" style={{fontWeight: '100'}}>{app_name} Services</h3>
         </div>
         <div className="container">
           <RiyaGit props={DashboardCards} />

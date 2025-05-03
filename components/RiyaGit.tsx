@@ -44,9 +44,9 @@ function RiyaGit({props}) {
       <div className="row">
         { props ? (
           props.map((records: IRecords) => (
-            <div className="col-xs-12 col-md-3 card" key={records?.id}>
+            <div className="col-xs-12 col-md-3 card special-hover" key={records?.id}>
               <div className="text-center m-3">
-              <h5 className="card-title">
+              <h5 className="card-title font-raleway-700">
               {records.tag}
               </h5>
               <p className="card-text text-muted fw-lighter fs-6">
