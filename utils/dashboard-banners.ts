@@ -57,7 +57,7 @@ export const DashboardCards: any[] = [
       "image": "https://cdn.pixabay.com/photo/2018/04/08/10/19/businessman-3300907_1280.jpg",
       "txt": "Related to admin issues and suggestions for administrator",
       "tag": "Administrator",
-      "route": "/"
+      "route": "/admin"
     },
     {
       "id": 8,
