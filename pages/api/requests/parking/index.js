@@ -24,7 +24,18 @@ export default function handler(req, res) {
             console.error('Error writing file:', error);
             res.status(500).json({ success: false, message: 'Internal Server Error' });
         }
+    } else if( req.method === 'GET') {
+        const filePath = path.join(process.cwd(), 'pages/api/requests/parking/parking.json');
+        try {
+            const fileData = fs.readFileSync(filePath, 'utf8');
+            const parkingIssues = JSON.parse(fileData).parkingissue;
+            res.status(200).json({ success: true, parkingIssues });
+        } catch (error) {
+            console.error('Error reading file:', error);
+            res.status(500).json({ success: false, message: 'Internal Server Error' });
+        }
     } else {
         res.status(405).json({ success: false, message: 'Method Not Allowed' });
     }
 }
+

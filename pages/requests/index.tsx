@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 const RequestsPage = () => {
   const [showInput, setShowInput] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
-  const [issueText, setIssueText] = useState({message: '', catergory: 'Parking Issue'}); // Store textarea value
+  const [issueText, setIssueText] = useState({id: '', message: '', catergory: 'Parking Issue', timestamp: ''}); // Store textarea value
 
   const boxmodel = {
     margin: "1rem",
@@ -39,7 +39,7 @@ const RequestsPage = () => {
         const data = await response.json();
         if (data.success) {
             setShowInput(false);
-            setIssueText({message: '', catergory: 'Parking Issue'}); // Reset textarea value
+            setIssueText({id: Date.now().toString(36) + Math.random().toString(36).substr(2, 5), message: '', catergory: 'Parking Issue', timestamp: new Date().toUTCString()}); // Reset textarea value
             // Hide the thank-you message after 10 seconds (10,000 milliseconds)
           setTimeout(() => {
             setShowThankYou(false);
@@ -79,7 +79,7 @@ const RequestsPage = () => {
                 rows={4}
                 placeholder="Describe your parking issue with -[name, block & flat number]"
                 value={issueText.message}
-                onChange={(e) => setIssueText({ ...issueText, message: e.target.value, catergory: 'Parking Issue' })} // Capture input
+                onChange={(e) => setIssueText({ ...issueText, id: Date.now().toString(36) + Math.random().toString(36).substr(2, 5), message: e.target.value, catergory: 'Parking Issue', timestamp: new Date().toUTCString() })} // Capture input
               ></textarea>
 
               <button className="btn btn-dark mt-2" onClick={parkingSubmit}>Send Now!</button>

@@ -4,7 +4,8 @@ import Header from "../../components/Header";
 import React, {useState} from 'react';
 import Image from 'next/image';
 import Footer from "../../components/Footer";
-import apartment from "./../../public/icons/svg/apartment.svg"
+import apartment from "./../../public/icons/svg/apartment.svg";
+import keywords from "../../lib/keywords"
 
 const apartmentIcon = {
   width: "30px",
@@ -17,8 +18,8 @@ const BuyPage = () => {
   const handleInputChange = (event) => { setPromoCode(event.target.value); };
 
   const handlerClik = () => {
-    const passmsg = "w3earth10";
-    if(passmsg === promoCode) {
+    if(promoCode === keywords.admin) {
+      console.log(keywords.admin)
       setShowBuyer(true)
     } else {
       setShowBuyer(false)
@@ -70,7 +71,7 @@ const BuyPage = () => {
             </div>) : (
               <>
               <h6 className="border-bottom pb-2 mb-0">Required association permission code to see seller lists</h6>
-              <div className="d-flex text-body-secondary pt-3">
+              <div className="d-flex text-body-secondary pt-3 centerbox">
                 <div className="m-4">
                 <form className="card p-2">
                 <div className="input-group">

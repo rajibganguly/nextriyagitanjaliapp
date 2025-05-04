@@ -33,6 +33,17 @@
         font-style: normal;
     }
 
+
+/**
+    * New styles
+    ***/
+
+    .centerbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 /* body {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;

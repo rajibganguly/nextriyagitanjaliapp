@@ -49,10 +49,10 @@ function RiyaGit({props}) {
               <h5 className="card-title font-raleway-700">
               {records.tag}
               </h5>
-              <p className="card-text text-muted fw-lighter fs-6">
+              <p className="card-text text-muted fw-lighter fs-6" style={{height: "60px"}}>
               {records.txt}
               </p>
-              <img src={records.image} className="img-thumbnail" alt="..." />
+              <img src={records.image} className="img-thumbnail" alt="..."  style={{minHeight: "60px"}} />
               <div className="card-footer">
                 <button onClick={() => handleClick(records)} className="btn btn-light">
                   see more

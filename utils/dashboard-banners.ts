@@ -72,6 +72,13 @@ export const DashboardCards: any[] = [
       "txt": "Do you want to pay monthly maintenance charges or a Festival subscription online?",
       "tag": "Payments",
       "route": "/payment"
+    },
+    {
+      "id": 10,
+      "image": "https://images.pexels.com/photos/8146320/pexels-photo-8146320.jpeg",
+      "txt": "Do you want to Rent or Buy? This is the right place for you",
+      "tag": "Rent/Buy",
+      "route": "/buy"
     }
 
   ]
